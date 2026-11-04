@@ -31,7 +31,7 @@ nav li.has-dropdown{position:relative}
 nav li.has-dropdown>a::after{content:"▾";display:inline-block;margin-left:.35em;font-size:.75em;transform:translateY(-1px)}
 nav ul.dropdown{
   display:none;flex-direction:column;gap:0;
-  position:absolute;left:0;top:100%;margin-top:.6rem;
+  position:absolute;left:0;top:100%;margin-top:0;
   min-width:19rem;padding:.5rem 0;
   background:var(--surface);border:1px solid var(--rule);border-radius:.5rem;
   box-shadow:0 10px 24px rgba(0,0,0,.12);z-index:30
