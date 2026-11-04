@@ -1,35 +1,170 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Glacier hydrology and motion at Kennicott Glacier | UI Glacier Dynamics</title>
-<meta name="description" content="Water within and at the base of glaciers has a dramatic impact on the rate of glacier ice flow. However, the connection between water and ice flow has…">
-<link rel="icon" href="../images/uploads/2020/10/favicon.ico">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css">
-</head>
-<body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="top"><div class="wrap">
-<a class="brand" href="../index.html">UI Glacier Dynamics</a>
-<nav aria-label="Main"><ul><li><a href="../research/index.html" aria-current="page">Research</a></li><li><a href="../team.html">Our team</a></li><li><a href="../publications.html">Publications</a></li><li><a href="../news/index.html">News</a></li><li><a href="../teaching.html">Teaching</a></li><li><a href="../join.html">Join us</a></li><li><a href="../photos/index.html">Photos</a></li></ul></nav>
-</div></header>
-<main id="main">
-<div class="wrap"><div class="page-head"><p class="crumb"><a href="../research/index.html">Research</a></p><h1>Glacier hydrology and motion at Kennicott Glacier</h1></div><article class="prose"><p>Water within and at the base of glaciers has a dramatic impact on the rate of glacier ice flow.</p>
-<figure class="alignleft"><a href="../images/uploads/2014/11/dSdt.png"><img alt="Changes in water storage are well correlated with glacier velocities, reflecting the interplay between accommodation space at glacier beds and basal water pressure (Bartholomaus et al., 2008)" height="178" loading="lazy" src="../images/uploads/2014/11/dSdt-300x178.png" width="300"/></a>
-<figcaption>Changes in water storage are well correlated with glacier velocities, reflecting the interplay between accommodation space at glacier beds and basal water pressure (<a href="../papers/Bartholomaus_etal_2008_NatGeo.pdf">Bartholomaus et al., 2008</a>)</figcaption>
-</figure>
-<p>However, the connection between water and ice flow has been uncertain.  At one point, it was thought that when more water flows through a glacier, the glacier itself will flow faster.  However, in the cover article of the first issue of <em>Nature Geoscience</em>, <a href="../images/uploads/2014/12/Bartholomaus_etal_2008_NatGeo.pdf">my co-authors and I demonstrate</a> how it is only the <em>increases</em> in the rate of water storage, not the total throughput of water, that drives glacier motion.</p>
-<figure class="alignright"><a href="../images/uploads/2014/11/model2011.png"><img alt="A numerical model which exchanges water between englacial and subglacial water storage reproduces many of the characteristics of glacier velocity timeseries (Bartholomaus et al., 2011)" height="206" loading="lazy" src="../images/uploads/2014/11/model2011-300x206.png" width="300"/></a>
-<figcaption>A numerical model which exchanges water between englacial and subglacial water storage reproduces many of the characteristics of glacier velocity timeseries (<a href="../papers/Bartholomaus_etal_2011_JGlac.pdf">Bartholomaus et al., 2011</a>)</figcaption>
-</figure>
-<p>This work drew on the annual outburst flood of Hidden Creek Lake through and beneath the Kennicott Glacier in Alaska to investigate the links between glacier hydrology and glacier motion.  With <a href="http://instaar.colorado.edu/~andersrs/">Bob Anderson</a> and <a href="http://instaar.colorado.edu/people/suzanne-anderson/">Suzanne Anderson</a> at the <a href="http://www.colorado.edu/">University of Colorado</a> <a href="http://instaar.colorado.edu/">Institute for Arctic and Alpine Research</a>, I collected new field data over 100 days of the glacier melt season and analyzed this data to develop a new conceptual model that emphasized the dynamism intrinsic to the subglacial hydrologic system.  A second paper, <a href="../images/uploads/2014/12/Bartholomaus_etal_2011_JGlac.pdf">published in the <em>Journal of Glaciology</em></a>, gives a more complete description of our data and combines predictive modeling with the ideas put forth in the Nature Geoscience letter.</p></article></div>
-</main>
-<footer><div class="wrap">
-<address>Glacier Dynamics Group, Dr. Timothy Bartholomaus<br>Department of Earth and Spatial Sciences, University of Idaho<br>875 Perimeter Drive MS 3025, Moscow, Idaho 83844-3025</address>
-<p style="margin:0">McClure Hall 307B · 208-885-6217<br><a href="../cv.html">Curriculum vitae</a> · <a href="https://tbartholomaus.github.io/uiglaciology/">Lab manual</a> · <a href="http://scholar.google.com/citations?user=MIBKAWwAAAAJ&amp;hl=en">Google Scholar</a></p>
-</div></footer>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Glacier hydrology and motion at Kennicott Glacier | UI Glacier Dynamics</title>
+    <meta
+      name="description"
+      content="Water within and at the base of glaciers has a dramatic impact on the rate of glacier ice flow. However, the connection between water and ice flow has…"
+    />
+    <link rel="icon" href="../images/uploads/2020/10/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../nav.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="top">
+      <div class="wrap">
+        <a class="brand" href="../index.html">UI Glacier Dynamics</a>
+        <nav aria-label="Main">
+          <ul>
+            <li class="has-dropdown">
+              <a href="../research/index.html">Research</a>
+              <ul class="dropdown">
+                <li><a href="../publications.html">Publications</a></li>
+                <li>
+                  <a href="../research/greenland.html"
+                    >Tidewater glacier change in West Greenland</a
+                  >
+                </li>
+                <li><a href="../photos/greenland.html">West Greenland field photos</a></li>
+                <li>
+                  <a href="../research/yahtse.html"
+                    >Iceberg calving and submarine melt at Yahtse Glacier</a
+                  >
+                </li>
+                <li><a href="../photos/yahtse.html">Yahtse field photos</a></li>
+                <li>
+                  <a href="../research/kennicott.html"
+                    >Glacier hydrology and motion at Kennicott Glacier</a
+                  >
+                </li>
+                <li>
+                  <a href="../research/calving-validation-archive.html"
+                    >Archive: Greenland Calving Validation</a
+                  >
+                </li>
+                <li><a href="../photos/index.html">Field photographs</a></li>
+              </ul>
+            </li>
+            <li><a href="../teaching.html">Teaching</a></li>
+            <li class="has-dropdown">
+              <a href="../team.html">Our team</a>
+              <ul class="dropdown">
+                <li><a href="../team.html">Team members</a></li>
+                <li><a href="https://tbartholomaus.github.io/uiglaciology/">Lab manual</a></li>
+                <li><a href="../cv.html">Bartholomaus C.V.</a></li>
+                <li><a href="../publications.html">Publications</a></li>
+                <li><a href="../join.html">Join us</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="../news/index.html">News</a>
+              <ul class="dropdown">
+                <li><a href="../media.html">Media coverage</a></li>
+                <li><a href="../news/index.html">Blog updates</a></li>
+                <li><a href="../events/nwg2022.html">Northwest Glaciologists 2022</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <div class="wrap">
+        <div class="page-head">
+          <p class="crumb"><a href="../research/index.html">Research</a></p>
+          <h1>Glacier hydrology and motion at Kennicott Glacier</h1>
+        </div>
+        <article class="prose">
+          <p>
+            Water within and at the base of glaciers has a dramatic impact on the rate of glacier
+            ice flow.
+          </p>
+          <figure class="alignleft">
+            <a href="../images/uploads/2014/11/dSdt.png"
+              ><img
+                alt="Changes in water storage are well correlated with glacier velocities, reflecting the interplay between accommodation space at glacier beds and basal water pressure (Bartholomaus et al., 2008)"
+                height="178"
+                loading="lazy"
+                src="../images/uploads/2014/11/dSdt-300x178.png"
+                width="300"
+            /></a>
+            <figcaption>
+              Changes in water storage are well correlated with glacier velocities, reflecting the
+              interplay between accommodation space at glacier beds and basal water pressure (<a
+                href="../papers/Bartholomaus_etal_2008_NatGeo.pdf"
+                >Bartholomaus et al., 2008</a
+              >)
+            </figcaption>
+          </figure>
+          <p>
+            However, the connection between water and ice flow has been uncertain.  At one point, it
+            was thought that when more water flows through a glacier, the glacier itself will flow
+            faster.  However, in the cover article of the first issue of <em>Nature Geoscience</em>,
+            <a href="../images/uploads/2014/12/Bartholomaus_etal_2008_NatGeo.pdf"
+              >my co-authors and I demonstrate</a
+            >
+            how it is only the <em>increases</em> in the rate of water storage, not the total
+            throughput of water, that drives glacier motion.
+          </p>
+          <figure class="alignright">
+            <a href="../images/uploads/2014/11/model2011.png"
+              ><img
+                alt="A numerical model which exchanges water between englacial and subglacial water storage reproduces many of the characteristics of glacier velocity timeseries (Bartholomaus et al., 2011)"
+                height="206"
+                loading="lazy"
+                src="../images/uploads/2014/11/model2011-300x206.png"
+                width="300"
+            /></a>
+            <figcaption>
+              A numerical model which exchanges water between englacial and subglacial water storage
+              reproduces many of the characteristics of glacier velocity timeseries (<a
+                href="../papers/Bartholomaus_etal_2011_JGlac.pdf"
+                >Bartholomaus et al., 2011</a
+              >)
+            </figcaption>
+          </figure>
+          <p>
+            This work drew on the annual outburst flood of Hidden Creek Lake through and beneath the
+            Kennicott Glacier in Alaska to investigate the links between glacier hydrology and
+            glacier motion.  With
+            <a href="http://instaar.colorado.edu/~andersrs/">Bob Anderson</a> and
+            <a href="http://instaar.colorado.edu/people/suzanne-anderson/">Suzanne Anderson</a> at
+            the <a href="http://www.colorado.edu/">University of Colorado</a>
+            <a href="http://instaar.colorado.edu/">Institute for Arctic and Alpine Research</a>, I
+            collected new field data over 100 days of the glacier melt season and analyzed this data
+            to develop a new conceptual model that emphasized the dynamism intrinsic to the
+            subglacial hydrologic system.  A second paper,
+            <a href="../images/uploads/2014/12/Bartholomaus_etal_2011_JGlac.pdf"
+              >published in the <em>Journal of Glaciology</em></a
+            >, gives a more complete description of our data and combines predictive modeling with
+            the ideas put forth in the Nature Geoscience letter.
+          </p>
+        </article>
+      </div>
+    </main>
+    <footer>
+      <div class="wrap">
+        <address>
+          Glacier Dynamics Group, Dr. Timothy Bartholomaus<br />Department of Earth and Spatial
+          Sciences, University of Idaho<br />875 Perimeter Drive MS 3025, Moscow, Idaho 83844-3025
+        </address>
+        <p style="margin: 0">
+          McClure Hall 307B · 208-885-6217<br /><a href="../cv.html">Curriculum vitae</a> ·
+          <a href="https://tbartholomaus.github.io/uiglaciology/">Lab manual</a> ·
+          <a href="http://scholar.google.com/citations?user=MIBKAWwAAAAJ&amp;hl=en"
+            >Google Scholar</a
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>

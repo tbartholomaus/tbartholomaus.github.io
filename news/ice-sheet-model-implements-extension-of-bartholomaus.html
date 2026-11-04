@@ -1,29 +1,155 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ice sheet model implements extension of Bartholomaus et al. (2011) | UI Glacier Dynamics</title>
-<meta name="description" content="In work from several years ago, co-authors and I developed a model of subglacial and englacial water storage that reproduces some of the characteristic…">
-<link rel="icon" href="../images/uploads/2020/10/favicon.ico">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css">
-</head>
-<body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="top"><div class="wrap">
-<a class="brand" href="../index.html">UI Glacier Dynamics</a>
-<nav aria-label="Main"><ul><li><a href="../research/index.html">Research</a></li><li><a href="../team.html">Our team</a></li><li><a href="../publications.html">Publications</a></li><li><a href="../news/index.html" aria-current="page">News</a></li><li><a href="../teaching.html">Teaching</a></li><li><a href="../join.html">Join us</a></li><li><a href="../photos/index.html">Photos</a></li></ul></nav>
-</div></header>
-<main id="main">
-<div class="wrap"><div class="page-head"><p class="crumb"><a href="index.html">News</a></p><h1>Ice sheet model implements extension of Bartholomaus et al. (2011)</h1><p class="meta"><time datetime="2015-02-09">February 9, 2015</time></p></div><article class="prose"><p>In work from several years ago, co-authors and I developed a model of subglacial and englacial water storage that reproduces some of the characteristic patterns of glacier flow observed in the field.  This work, <a href="../papers/Bartholomaus_etal_2011_JGlac.pdf">published in the Journal of Glaciology</a>, was motivated by observations from Kennicott Glacier in Alaska, where a large, ice-dammed lake drains beneath the glacier annually.  During the flood, water delivery to the glacier <a href="../papers/Bartholomaus_etal_2008_NatGeo.pdf">temporarily overwhelms the glacier's ability to convey that water</a> through and beneath the glacier, and the glacier flow speed increases by a factor of 5.</p>
-<p>Now, in recent work by Ed Bueler, head of the <a href="www.pism-docs.org/">PISM ice sheet modeling group at UAF</a>, the model described in Bartholomaus et al. (2011) has been extended in a manner that allows it to be implemented efficiently at a large scale.  This distributed version  of the hydrology model can now be used within PISM and other ice sheet models to simulate water flow at the base of, for example, the Greenland and Antarctic ice sheets.  You can read more about Ed's advance, published in the Journal of Glaciology, <a href="http://www.ingentaconnect.com/content/igsoc/jog/2014/00000060/00000222/art00018">here</a>.</p>
-<p><a href="../images/uploads/2015/02/Bueler2014.jpg"><img alt="Bueler 2014- Extending the lumped subglacial-englacial hydrology model of Bartholomaus and other (2011)" height="336" loading="lazy" src="../images/uploads/2015/02/Bueler2014-300x223.jpg" width="450"/></a></p></article><nav class="pager" aria-label="More news"><a href="novel-views-iceberg-calving-presented-parca.html">Older: Novel views of iceberg calving presented at PARCA</a><a href="tim-joins-editorial-board-of-frontiers-in-cryospheric-science.html" style="text-align:right">Newer: Tim joins editorial board of Frontiers in Cryospheric Science</a></nav></div>
-</main>
-<footer><div class="wrap">
-<address>Glacier Dynamics Group, Dr. Timothy Bartholomaus<br>Department of Earth and Spatial Sciences, University of Idaho<br>875 Perimeter Drive MS 3025, Moscow, Idaho 83844-3025</address>
-<p style="margin:0">McClure Hall 307B · 208-885-6217<br><a href="../cv.html">Curriculum vitae</a> · <a href="https://tbartholomaus.github.io/uiglaciology/">Lab manual</a> · <a href="http://scholar.google.com/citations?user=MIBKAWwAAAAJ&amp;hl=en">Google Scholar</a></p>
-</div></footer>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Ice sheet model implements extension of Bartholomaus et al. (2011) | UI Glacier Dynamics
+    </title>
+    <meta
+      name="description"
+      content="In work from several years ago, co-authors and I developed a model of subglacial and englacial water storage that reproduces some of the characteristic…"
+    />
+    <link rel="icon" href="../images/uploads/2020/10/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../nav.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="top">
+      <div class="wrap">
+        <a class="brand" href="../index.html">UI Glacier Dynamics</a>
+        <nav aria-label="Main">
+          <ul>
+            <li class="has-dropdown">
+              <a href="../research/index.html">Research</a>
+              <ul class="dropdown">
+                <li><a href="../publications.html">Publications</a></li>
+                <li>
+                  <a href="../research/greenland.html"
+                    >Tidewater glacier change in West Greenland</a
+                  >
+                </li>
+                <li><a href="../photos/greenland.html">West Greenland field photos</a></li>
+                <li>
+                  <a href="../research/yahtse.html"
+                    >Iceberg calving and submarine melt at Yahtse Glacier</a
+                  >
+                </li>
+                <li><a href="../photos/yahtse.html">Yahtse field photos</a></li>
+                <li>
+                  <a href="../research/kennicott.html"
+                    >Glacier hydrology and motion at Kennicott Glacier</a
+                  >
+                </li>
+                <li>
+                  <a href="../research/calving-validation-archive.html"
+                    >Archive: Greenland Calving Validation</a
+                  >
+                </li>
+                <li><a href="../photos/index.html">Field photographs</a></li>
+              </ul>
+            </li>
+            <li><a href="../teaching.html">Teaching</a></li>
+            <li class="has-dropdown">
+              <a href="../team.html">Our team</a>
+              <ul class="dropdown">
+                <li><a href="../team.html">Team members</a></li>
+                <li><a href="https://tbartholomaus.github.io/uiglaciology/">Lab manual</a></li>
+                <li><a href="../cv.html">Bartholomaus C.V.</a></li>
+                <li><a href="../publications.html">Publications</a></li>
+                <li><a href="../join.html">Join us</a></li>
+              </ul>
+            </li>
+            <li class="has-dropdown">
+              <a href="../news/index.html">News</a>
+              <ul class="dropdown">
+                <li><a href="../media.html">Media coverage</a></li>
+                <li><a href="../news/index.html">Blog updates</a></li>
+                <li><a href="../events/nwg2022.html">Northwest Glaciologists 2022</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <div class="wrap">
+        <div class="page-head">
+          <p class="crumb"><a href="index.html">News</a></p>
+          <h1>Ice sheet model implements extension of Bartholomaus et al. (2011)</h1>
+          <p class="meta"><time datetime="2015-02-09">February 9, 2015</time></p>
+        </div>
+        <article class="prose">
+          <p>
+            In work from several years ago, co-authors and I developed a model of subglacial and
+            englacial water storage that reproduces some of the characteristic patterns of glacier
+            flow observed in the field.  This work,
+            <a href="../papers/Bartholomaus_etal_2011_JGlac.pdf"
+              >published in the Journal of Glaciology</a
+            >, was motivated by observations from Kennicott Glacier in Alaska, where a large,
+            ice-dammed lake drains beneath the glacier annually.  During the flood, water delivery
+            to the glacier
+            <a href="../papers/Bartholomaus_etal_2008_NatGeo.pdf"
+              >temporarily overwhelms the glacier's ability to convey that water</a
+            >
+            through and beneath the glacier, and the glacier flow speed increases by a factor of 5.
+          </p>
+          <p>
+            Now, in recent work by Ed Bueler, head of the
+            <a href="www.pism-docs.org/">PISM ice sheet modeling group at UAF</a>, the model
+            described in Bartholomaus et al. (2011) has been extended in a manner that allows it to
+            be implemented efficiently at a large scale.  This distributed version  of the hydrology
+            model can now be used within PISM and other ice sheet models to simulate water flow at
+            the base of, for example, the Greenland and Antarctic ice sheets.  You can read more
+            about Ed's advance, published in the Journal of Glaciology,
+            <a
+              href="http://www.ingentaconnect.com/content/igsoc/jog/2014/00000060/00000222/art00018"
+              >here</a
+            >.
+          </p>
+          <p>
+            <a href="../images/uploads/2015/02/Bueler2014.jpg"
+              ><img
+                alt="Bueler 2014- Extending the lumped subglacial-englacial hydrology model of Bartholomaus and other (2011)"
+                height="336"
+                loading="lazy"
+                src="../images/uploads/2015/02/Bueler2014-300x223.jpg"
+                width="450"
+            /></a>
+          </p>
+        </article>
+        <nav class="pager" aria-label="More news">
+          <a href="novel-views-iceberg-calving-presented-parca.html"
+            >Older: Novel views of iceberg calving presented at PARCA</a
+          ><a
+            href="tim-joins-editorial-board-of-frontiers-in-cryospheric-science.html"
+            style="text-align: right"
+            >Newer: Tim joins editorial board of Frontiers in Cryospheric Science</a
+          >
+        </nav>
+      </div>
+    </main>
+    <footer>
+      <div class="wrap">
+        <address>
+          Glacier Dynamics Group, Dr. Timothy Bartholomaus<br />Department of Earth and Spatial
+          Sciences, University of Idaho<br />875 Perimeter Drive MS 3025, Moscow, Idaho 83844-3025
+        </address>
+        <p style="margin: 0">
+          McClure Hall 307B · 208-885-6217<br /><a href="../cv.html">Curriculum vitae</a> ·
+          <a href="https://tbartholomaus.github.io/uiglaciology/">Lab manual</a> ·
+          <a href="http://scholar.google.com/citations?user=MIBKAWwAAAAJ&amp;hl=en"
+            >Google Scholar</a
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>
