@@ -55,6 +55,8 @@ h4,h5{font-weight:600;font-size:1.12rem}
 /* Page shell */
 .page-head{padding:3rem 0 1.5rem}
 .page-head .meta{font-family:var(--head);color:var(--moraine);margin:0}
+.btn{display:inline-block;padding:.65rem 1.3rem;margin:.3rem .6rem .3rem 0;background:var(--flag);color:#fff;border-radius:.4rem;font-family:var(--head);font-weight:600;font-size:1.02rem;text-decoration:none}
+.btn:hover{opacity:.85;color:#fff}
 .crumb{font-family:var(--head);margin:0 0 .5rem}
 .crumb a{color:var(--moraine);text-decoration:none}
 article.prose{max-width:44rem;padding-bottom:3.5rem}
