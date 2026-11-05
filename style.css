@@ -90,7 +90,9 @@ iframe.map{width:100%;height:340px;border:0}
 .note{background:var(--surface);border-left:3px solid var(--flag);padding:.8rem 1rem;font-size:.98rem}
 
 /* Home */
-.hero{padding:4rem 0 1.5rem}
+/* Vertical only — a padding shorthand here would cancel .wrap's side padding
+   and let the hero run to the window edge on narrow screens. */
+.hero{padding-top:4rem;padding-bottom:1.5rem}
 .hero h1{font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.1;max-width:26em;margin-bottom:1.25rem;text-wrap:balance}
 .hero .lede{font-size:1.22rem;max-width:42rem;margin:0;color:var(--slate)}
 .trace{display:block;width:100%;height:96px;margin:2.5rem 0 .4rem}
