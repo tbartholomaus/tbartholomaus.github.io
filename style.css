@@ -65,6 +65,10 @@ article.prose{max-width:44rem;padding-bottom:3.5rem}
 @media (min-width:900px){
   .prose figure.alignleft{float:left;max-width:45%;margin:.4rem 1.75rem 1rem 0}
   .prose figure.alignright{float:right;max-width:45%;margin:.4rem 0 1rem 1.75rem}
+  /* Stack consecutive figures on the same side instead of letting them sit
+     side by side, which squeezes the text into an unreadably narrow column. */
+  .prose figure.alignleft + figure.alignleft{clear:left}
+  .prose figure.alignright + figure.alignright{clear:right}
   /* Hold the paragraph in its own column beside a floated figure, so a short
      tail doesn't drop below the image and restart at the far left margin. */
   .prose p.beside-figure{display:flow-root}
