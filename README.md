@@ -1,20 +1,29 @@
-# UI Glacier Dynamics website (rebuilt from tbartholomaus.org)
+# UI Glacier Dynamics website
 
-A static site for GitHub Pages, generated from the WordPress export (all 76 news posts, 21 pages, team, CV, publications). No build step, no plugins, no login.
+The lab website for the Glacier Dynamics Group at the University of Idaho, served from GitHub Pages at [tbartholomaus.github.io](https://tbartholomaus.github.io/). Plain HTML and CSS — no build step, no plugins, no login. Originally generated from a WordPress export of tbartholomaus.org.
 
-## 1. Pull in the photos (once)
-On your Mac, from this folder:
+## Editing
 
-    bash fetch_photos.sh
+Edit the `.html` files directly. The site is formatted with [Prettier](https://prettier.io/); after changing any HTML, run:
 
-This downloads every photo, figure and paper PDF the pages use (listed in `download-list.txt`) from the old site, plus the two photo galleries. Anything that isn't a real image or PDF is deleted automatically. Re-run it any time; it skips files it already has.
+    npx prettier --print-width 100 --write "*.html" "news/*.html" "research/*.html" "photos/*.html" "events/*.html"
 
-## 2. Publish
-1. Your GitHub account `tbartholomaus` already hosts the lab manual at `tbartholomaus.github.io/uiglaciology/`. Create a repo named exactly `tbartholomaus.github.io` (if it doesn't exist) — the lab manual keeps working at its current address.
-2. Push everything in this folder (including `.nojekyll`) to `main`.
-3. Repo Settings → Pages → Deploy from branch `main`, folder `/ (root)`.
-4. Optional, to keep tbartholomaus.org: add a `CNAME` file containing `tbartholomaus.org`, point the domain's DNS at GitHub Pages, and tick "Enforce HTTPS".
+To preview locally:
+
+    python3 -m http.server 8743
+
+### Shared pieces
+
+- The header nav is duplicated in every page. Change one, change them all (a small script is the sane way to do it).
+- `nav.js` handles the dropdown menus, current-page highlighting, and assembles `mailto:` links at runtime so addresses aren't sitting in the page source for spam harvesters.
+- `style.css` holds everything visual. Floated figures use `figure.alignleft` / `figure.alignright`, which only float at ≥900px wide.
+
+## Publishing
+
+Push to `main`. GitHub Pages builds and deploys automatically; `.nojekyll` keeps Jekyll out of the way.
 
 ## Notes
+
 - Old WordPress URLs like `/our-team/` map to `team.html`, etc. Links between pages are relative, so the site also works when opened locally.
-- The Calving Validation data archive (`research/calving-validation-archive.html`) still links to the `.hdf5` / metadata files on the old server. Move those to Zenodo or similar (GitHub rejects files over 100 MB) and update the links before retiring the old host.
+- Photos are capped at 2800px on the long edge, JPEG quality 85. Keep new photos in that range — the repo got large enough once to time out the Pages deploy.
+- The Calving Validation data archive (`research/calving-validation-archive.html`) still links to `.hdf5` / metadata files on the old server. Move those to Zenodo or similar (GitHub rejects files over 100 MB) and update the links before retiring the old host.

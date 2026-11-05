@@ -54,3 +54,18 @@
     }
   });
 })();
+
+// Assemble mailto: links at runtime. The address is split across data
+// attributes so it never appears as a harvestable string in the page source;
+// a <noscript> fallback spells it out for anyone without JavaScript.
+(function () {
+  document.querySelectorAll('a.email-link[data-user][data-domain]').forEach(function (a) {
+    var address = a.dataset.user + '@' + a.dataset.domain;
+    a.href = 'mailto:' + address;
+    // An empty link means "show the address itself" — keeping it out of the
+    // source while still displaying it, as in the footer.
+    if (!a.textContent.trim()) a.textContent = address;
+    a.removeAttribute('data-user');
+    a.removeAttribute('data-domain');
+  });
+})();
