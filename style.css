@@ -21,8 +21,20 @@ img{max-width:100%;height:auto}
 .skip{position:absolute;left:-9999px}.skip:focus{left:1rem;top:1rem;background:var(--surface);padding:.5rem 1rem;z-index:10}
 
 header.top{border-bottom:1px solid var(--rule);background:var(--surface)}
-header.top .wrap{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.5rem 2rem;padding-block:1rem}
-.brand{font-family:var(--head);font-weight:700;font-size:1.2rem;color:var(--fjord);text-decoration:none}
+header.top .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem 2rem;padding-block:1rem}
+.brand{font-family:var(--head);font-weight:700;font-size:1.2rem;color:var(--fjord);text-decoration:none;display:inline-flex;align-items:center;flex-wrap:wrap;gap:.55rem}
+/* University of Idaho mark. Shipped in two versions because the wordmark is
+   near-black and disappears on the dark-mode header; <picture> swaps them.
+   Height is in em so the "University of Idaho" wordmark inside the image keeps
+   matching the "Glacier Dynamics" text beside it: the wordmark's cap height is
+   0.289 of the image, and the text's is 0.730 of its font-size, so the image
+   needs to be 0.730 / 0.289 = 2.53em tall.
+   The shift sits the wordmark a touch below the text baseline, which reads
+   better optically than an exact baseline match (that would be -0.1em). */
+.brand-logo{height:2.53em;width:auto;display:block;flex:none;transform:translateY(-0.025em)}
+/* Shrink the whole lockup together on small screens — the logo is sized in em,
+   so the wordmark and "Glacier Dynamics" stay matched as this scales. */
+@media (max-width:420px){.brand{font-size:.95rem}}
 nav ul{list-style:none;display:flex;flex-wrap:wrap;gap:.25rem 1.2rem;margin:0;padding:0}
 nav a{font-family:var(--head);font-weight:500;font-size:1.02rem;color:var(--slate);text-decoration:none}
 nav a:hover,nav a[aria-current],nav a.current-group{color:var(--flag)}
